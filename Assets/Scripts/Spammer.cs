@@ -5,6 +5,7 @@ namespace Assets.Scripts
 	public class Spammer: MonoBehaviour
 	{
 		public string Name { get; private set; }
+		public int Level { get; private set; }
 		public float Money { get; private set; }
 		public int SpamSent { get; private set; }
 
@@ -17,6 +18,7 @@ namespace Assets.Scripts
 		public void Start()
 		{
 			Name = name;
+			Level = 1;
 			SpamSent = 0;
 			SpamRead = 0;
 			_internalSpamReadCounter = 0;
