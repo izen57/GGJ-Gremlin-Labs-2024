@@ -11,7 +11,7 @@ namespace Assets.Scripts
 		public float ReadFrequency { get; private set; }
 		public float MoneyPerRead { get; private set; }
 
-		public Spammer(string name)
+		public void Start()
 		{
 			Name = name;
 			SpamSent = 0f;
