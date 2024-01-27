@@ -17,6 +17,8 @@ namespace Assets.Scripts
 
 		public void Start()
 		{
+			Debug.Log("The spammer has been started.");
+
 			Name = name;
 			Level = 1;
 			SpamSent = 0;
@@ -30,18 +32,21 @@ namespace Assets.Scripts
 		public void IncreaseSpam()
 		{
 			SpamSent++;
+			Debug.Log("SpamSent has been increased.");
 		}
 
 		public void IncreaseMoney()
 		{
 			Money += MoneyPerRead;
+			Debug.Log("Money has been increased.");
 		}
 
 		public void OnSpamRead()
 		{
 			if (++_internalSpamReadCounter % ReadFrequency == 0) {
 				IncreaseMoney();
-				++SpamRead;
+				SpamRead++;
+				Debug.Log("SpamRead has been increased.");
 			}
 		}
 	}
