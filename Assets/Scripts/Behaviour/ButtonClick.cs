@@ -1,3 +1,5 @@
+using Assets.Scripts;
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -52,6 +54,8 @@ public class ButtonClick : MonoBehaviour
             letter.transform.position = transform.position;
             letter.transform.rotation = transform.rotation;
             letter.SetActive(true);
+
+            GameController.Instance.IncreaseSpam();
         }
     }
 

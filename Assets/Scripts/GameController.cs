@@ -2,9 +2,8 @@
 
 namespace Assets.Scripts
 {
-	public class Spammer: MonoBehaviour
+	public class GameController
 	{
-		public string Name { get; private set; }
 		public float Money { get; private set; }
 		public int SpamSent { get; private set; }
 
@@ -14,19 +13,25 @@ namespace Assets.Scripts
 		public float ReadFrequency { get; private set; }
 		public float MoneyPerRead { get; private set; }
 
-		public void Start()
+		private static GameController _instance = null;
+		public static GameController Instance
 		{
-			Debug.Log("The spammer has been started.");
+			get {
+				_instance ??= new GameController();
+				return _instance;
+			}
+		}
 
-			Name = name;
+		private GameController()
+		{
+			Debug.Log("The spammer has been initialized.");
+
 			SpamSent = 0;
 			SpamRead = 0;
 			_internalSpamReadCounter = 0;
 			Money = 0f;
 			MoneyPerRead = 0.2f;
 			ReadFrequency = 10f;
-
-			GetComponent<Renderer>().enabled = false;
 		}
 		
 		public void IncreaseSpam()
