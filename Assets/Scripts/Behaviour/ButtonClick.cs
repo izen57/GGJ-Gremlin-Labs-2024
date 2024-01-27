@@ -56,6 +56,7 @@ public class ButtonClick : MonoBehaviour
             letter.SetActive(true);
 
             GameController.Instance.IncreaseSpam();
+            GameController.Instance.OnSpamRead();
         }
     }
 

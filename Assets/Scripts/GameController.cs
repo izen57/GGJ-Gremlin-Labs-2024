@@ -40,6 +40,12 @@ namespace Assets.Scripts
 			Debug.Log("SpamSent has been increased.");
 		}
 
+		public void IncreaseSpam(int spamCount)
+		{
+			SpamSent += spamCount;
+			Debug.Log($"SpamSent has been increased by {spamCount}.");
+		}
+
 		public void IncreaseMoney()
 		{
 			Money += MoneyPerRead;
