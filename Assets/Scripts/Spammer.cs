@@ -27,6 +27,8 @@ namespace Assets.Scripts
 			Money = 0f;
 			MoneyPerRead = 10f;
 			ReadFrequency = 5f;
+
+			GetComponent<Renderer>().enabled = false;
 		}
 		
 		public void IncreaseSpam()
