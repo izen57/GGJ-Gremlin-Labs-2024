@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using TMPro;
 
 public class GameController
 {
@@ -65,6 +64,7 @@ public class GameController
 		if (++_internalSpamReadCounter % ReadFrequency == 0) {
 			IncreaseMoney();
 			SpamRead++;
+			Object.FindObjectOfType<SpamReadText>().ChangeText(SpamRead.ToString());
 			Debug.Log("SpamRead has been increased.");
 		}
 	}
