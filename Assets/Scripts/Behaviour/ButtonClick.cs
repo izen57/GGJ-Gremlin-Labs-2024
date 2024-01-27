@@ -51,8 +51,7 @@ public class ButtonClick : MonoBehaviour
                 Random.Range(-20.0f, 20.0f), 
                 Random.Range(5.0f, 30.0f), 
                 Random.Range(-20.0f, 20.0f));
-            letter.transform.position = transform.position;
-            letter.transform.rotation = transform.rotation;
+            letter.transform.SetPositionAndRotation(transform.position, transform.rotation);
             letter.SetActive(true);
 
             GameController.Instance.SendSpam(1);
