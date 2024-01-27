@@ -62,19 +62,21 @@ public class ButtonClick : MonoBehaviour
             if (status)
             {
                 Debug.Log("Success");
-                letter.SetActive(false);
-                successAnimation.transform.position = letter.transform.position;
-                successAnimation.transform.rotation = letter.transform.rotation;
-                float time = 10;
-                StartCoroutine(PlaySuccessAnimation(time));
+                float time = 2;
+                StartCoroutine(PlaySuccessAnimation(time, letter));
             }
         }
     }
 
-    IEnumerator PlaySuccessAnimation(float time)
+    IEnumerator PlaySuccessAnimation(float time, GameObject letter)
     {
-        successAnimation.SetActive(true);
+        
         yield return new WaitForSeconds(time);
+        letter.SetActive(false);
+        successAnimation.transform.position = letter.transform.position;
+        successAnimation.transform.rotation = letter.transform.rotation;
+        successAnimation.SetActive(true);
+        yield return new WaitForSeconds(3);
         successAnimation.SetActive(false);
     }
 
