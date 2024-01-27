@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class GameController
 {
 	public float Money { get; private set; }
+	//private MoneyText moneyText;
+
 	public int SpamSent { get; private set; }
+	//private SpamSentText spamSentText;
 
 	public int SpamRead { get; private set; }
 	private int _internalSpamReadCounter;
@@ -30,23 +34,29 @@ public class GameController
 		Money = 0f;
 		MoneyPerRead = 0.2f;
 		ReadFrequency = 10f;
+
+		//spamSentText = GameObject.Instantiate(spamSentText);
+		//moneyText = GameObject.Instantiate(moneyText);
 	}
-		
+
 	public void IncreaseSpam()
 	{
 		SpamSent++;
+		Object.FindObjectOfType<SpamSentText>().ChangeText(SpamSent.ToString());
 		Debug.Log("SpamSent has been increased.");
 	}
 
 	public void IncreaseSpam(int spamCount)
 	{
 		SpamSent += spamCount;
+		Object.FindObjectOfType<SpamSentText>().ChangeText(SpamSent.ToString());
 		Debug.Log($"SpamSent has been increased by {spamCount}.");
 	}
 
 	public void IncreaseMoney()
 	{
 		Money += MoneyPerRead;
+		Object.FindObjectOfType<MoneyText>().ChangeText(Money.ToString());
 		Debug.Log("Money has been increased.");
 	}
 
