@@ -1,9 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ButtonCllck : MonoBehaviour
+public class ButtonClick : MonoBehaviour
 {
     [SerializeField]
     public InputActionReference buttonPressAction;
