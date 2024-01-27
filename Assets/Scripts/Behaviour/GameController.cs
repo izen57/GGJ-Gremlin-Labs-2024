@@ -3,10 +3,7 @@
 public class GameController
 {
 	public float Money { get; private set; }
-	//private MoneyText moneyText;
-
 	public int SpamSent { get; private set; }
-	//private SpamSentText spamSentText;
 
 	public int SpamRead { get; private set; }
 	private int _internalSpamReadCounter;
@@ -33,9 +30,6 @@ public class GameController
 		Money = 0f;
 		MoneyPerRead = 0.2f;
 		ReadFrequency = 10f;
-
-		//spamSentText = GameObject.Instantiate(spamSentText);
-		//moneyText = GameObject.Instantiate(moneyText);
 	}
 
 	public void IncreaseSpam()

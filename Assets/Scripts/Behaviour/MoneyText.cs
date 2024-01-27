@@ -1,3 +1,5 @@
+using System;
+
 using TMPro;
 
 using UnityEngine;
@@ -9,7 +11,7 @@ public class MoneyText : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		m_Object.text = "$" + GameController.Instance.Money.ToString();
+		m_Object.text = "$" + Math.Round(GameController.Instance.Money, 2).ToString();
 	}
 
 	public void ChangeText(string text)
