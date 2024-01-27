@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LetterSO", menuName = "Scriptable Objects/ Letter")]
 public class SpamText : ScriptableObject
 {
     [SerializeField] string spam; 
@@ -16,4 +13,5 @@ public class SpamText : ScriptableObject
     "https://www.cookieclicker.com - actual quality clicker",
     "Hllo man, so I hav a problm...on of my kys ar brokn and I don't know why. Is thr a chanc I can borrow your kyboard for a momnt?And do you know whr I can buy a nw and chap kyboard?",
     "Hey, this is Monolingo. It seems you haven't done your spanish in a while. Wow that's a lot of play time in this clicker game."};*/
+
 }
