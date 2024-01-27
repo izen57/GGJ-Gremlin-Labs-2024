@@ -48,9 +48,9 @@ public class ButtonClick : MonoBehaviour
             GameObject letter = pooledObjects[letterIndex];
             Rigidbody rb = rbs[letterIndex];
             rb.velocity = new Vector3(
-                Random.Range(-20.0f, 20.0f), 
-                Random.Range(5.0f, 30.0f), 
-                Random.Range(-20.0f, 20.0f));
+                Random.Range(-15.0f, 15.0f), 
+                Random.Range(3.0f, 15.0f), 
+                Random.Range(-15.0f, 15.0f));
             letter.transform.SetPositionAndRotation(transform.position, transform.rotation);
             letter.SetActive(true);
 
