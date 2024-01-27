@@ -1281,6 +1281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPressAction: {fileID: 8305417166187163160, guid: 01fbad27f93b1ea47b6570bf79335d3c, type: 3}
+  successAnimation: {fileID: 405764927744918798, guid: da69a7216b4c6074a91198cf817eceb3, type: 3}
   objectToPool: {fileID: 1614260342516055918, guid: ce76b489b1749c04fba7fb5f91ca47fe, type: 3}
   amountToPool: 10
 --- !u!1 &859456157
@@ -2073,7 +2074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1737472422
 CanvasRenderer:
   m_ObjectHideFlags: 0

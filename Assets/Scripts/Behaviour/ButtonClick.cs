@@ -1,6 +1,7 @@
 using Assets.Scripts;
 
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,7 @@ public class ButtonClick : MonoBehaviour
 {
     [SerializeField]
     public InputActionReference buttonPressAction;
+    public GameObject successAnimation;
 
     private List<GameObject> pooledObjects;
     private List<Rigidbody> rbs;
@@ -26,6 +28,8 @@ public class ButtonClick : MonoBehaviour
             pooledObjects.Add(tmp);
             rbs.Add(tmp.GetComponent<Rigidbody>());
         }
+        successAnimation = Instantiate(successAnimation);
+        successAnimation.SetActive(false);
     }
 
     private void OnEnable()
@@ -54,11 +58,27 @@ public class ButtonClick : MonoBehaviour
             letter.transform.SetPositionAndRotation(transform.position, transform.rotation);
             letter.SetActive(true);
 
-            GameController.Instance.SendSpam(1);
+            bool status = GameController.Instance.SendSpam(1);
+            if (status)
+            {
+                Debug.Log("Success");
+                letter.SetActive(false);
+                successAnimation.transform.position = letter.transform.position;
+                successAnimation.transform.rotation = letter.transform.rotation;
+                float time = 10;
+                StartCoroutine(PlaySuccessAnimation(time));
+            }
         }
     }
 
-    public int GetFreeObjectIndex()
+    IEnumerator PlaySuccessAnimation(float time)
+    {
+        successAnimation.SetActive(true);
+        yield return new WaitForSeconds(time);
+        successAnimation.SetActive(false);
+    }
+
+public int GetFreeObjectIndex()
     {
         for (int i = 0; i < amountToPool; i++)
         {
