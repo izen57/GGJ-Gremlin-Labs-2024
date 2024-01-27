@@ -4,14 +4,14 @@ using Object = UnityEngine.Object;
 
 public class GameController
 {
-	public float Money { get; private set; }
+	public int Money { get; private set; }
 	public int SpamSent { get; private set; }
 
 	public int SpamRead { get; private set; }
 	private int _internalSpamReadCounter;
 
-	public float ReadFrequency { get; private set; }
-	public float MoneyPerRead { get; private set; }
+	public int ReadFrequency { get; private set; }
+	public int MoneyPerRead { get; private set; }
 
 	private static GameController _instance = null;
 	public static GameController Instance
@@ -29,9 +29,9 @@ public class GameController
 		SpamSent = 0;
 		SpamRead = 0;
 		_internalSpamReadCounter = 0;
-		Money = 0f;
-		MoneyPerRead = 0.2f;
-		ReadFrequency = 10f;
+		Money = 0;
+		MoneyPerRead = 2;
+		ReadFrequency = 10;
 	}
 
 	public void IncreaseSpam()
@@ -53,6 +53,13 @@ public class GameController
 		Money += MoneyPerRead;
 		Object.FindObjectOfType<MoneyText>().ChangeText(Money.ToString());
 		Debug.Log("Money has been increased.");
+	}
+
+	public void IncreaseReadFrequency(int diff)
+	{
+		ReadFrequency += diff;
+		Object.FindObjectOfType<ReadFrequencyText>().ChangeText(ReadFrequency.ToString());
+		Debug.Log($"ReadFrequency has been increased by {diff}.");
 	}
 
 	public bool OnSpamRead(int spamCount)

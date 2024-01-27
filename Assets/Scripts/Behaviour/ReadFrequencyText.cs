@@ -1,5 +1,3 @@
-using System;
-
 using TMPro;
 
 using UnityEngine;
@@ -11,7 +9,7 @@ public class ReadFrequencyText : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		m_Object.text = Math.Round(GameController.Instance.ReadFrequency, 2).ToString();
+		m_Object.text = GameController.Instance.ReadFrequency.ToString();
 	}
 
 	public void ChangeText(string text)
