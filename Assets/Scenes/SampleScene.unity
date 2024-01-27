@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.85925, y: 0.9665398}
   m_AnchorMax: {x: 0.85925, y: 0.9665398}
-  m_AnchoredPosition: {x: 54.8, y: -10.8}
+  m_AnchoredPosition: {x: 54.799988, y: -10.799988}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14452440
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e2c7b2b3648414597d137d8a690ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Object: {fileID: 0}
+  m_Object: {fileID: 84387751}
 --- !u!1 &421760956
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640e225d81a8b45408f5cb59ca639a30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Object: {fileID: 0}
+  m_Object: {fileID: 561132523}
 --- !u!1 &651974765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1721,7 @@ GameObject:
   - component: {fileID: 1665418037}
   - component: {fileID: 1665418039}
   - component: {fileID: 1665418038}
+  - component: {fileID: 1665418040}
   m_Layer: 5
   m_Name: MoneyPerReadText
   m_TagString: Untagged
@@ -1844,6 +1845,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665418036}
   m_CullTransparentMesh: 1
+--- !u!114 &1665418040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665418036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830c13b3704d00e489f8e972958f9779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Object: {fileID: 1665418038}
 --- !u!1 &2053072694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +1869,7 @@ GameObject:
   - component: {fileID: 2053072695}
   - component: {fileID: 2053072697}
   - component: {fileID: 2053072696}
+  - component: {fileID: 2053072698}
   m_Layer: 5
   m_Name: SpamReadText
   m_TagString: Untagged
@@ -1978,6 +1993,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053072694}
   m_CullTransparentMesh: 1
+--- !u!114 &2053072698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053072694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ed7a3b8c0093c459558094129394e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Object: {fileID: 2053072696}
 --- !u!1 &2055643962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2062,7 @@ GameObject:
   - component: {fileID: 2132344376}
   - component: {fileID: 2132344378}
   - component: {fileID: 2132344377}
+  - component: {fileID: 2132344379}
   m_Layer: 5
   m_Name: ReadFrequencyText
   m_TagString: Untagged
@@ -2157,6 +2186,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132344375}
   m_CullTransparentMesh: 1
+--- !u!114 &2132344379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132344375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfc26caeb140d641acb622a8654b9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Object: {fileID: 2132344377}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

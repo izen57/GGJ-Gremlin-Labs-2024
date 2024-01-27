@@ -9,8 +9,7 @@ public class MoneyText : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		//m_Object = GetComponent<TextMeshProUGUI>();
-		m_Object.text = "$0";
+		m_Object.text = "$" + GameController.Instance.Money.ToString();
 	}
 
 	public void ChangeText(string text)
