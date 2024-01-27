@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts;
 
 public class BotController : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class BotController : MonoBehaviour
         yield return new WaitForSeconds(time);
         while (true)
         {
+            GameController.Instance.IncreaseSpam(botSO.letters);
+            GameController.Instance.OnSpamRead();
             Debug.Log("Send letter with bot");
             yield return new WaitForSeconds(time);
         }
