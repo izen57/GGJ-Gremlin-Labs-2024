@@ -46,7 +46,10 @@ public class ButtonCllck : MonoBehaviour
         {
             GameObject letter = pooledObjects[letterIndex];
             Rigidbody rb = rbs[letterIndex];
-            rb.velocity = new Vector3(0, 10, 0);
+            rb.velocity = new Vector3(
+                Random.Range(-20.0f, 20.0f), 
+                Random.Range(5.0f, 30.0f), 
+                Random.Range(-20.0f, 20.0f));
             letter.transform.position = transform.position;
             letter.transform.rotation = transform.rotation;
             letter.SetActive(true);
