@@ -60,5 +60,11 @@ namespace Assets.Scripts
 				Debug.Log("SpamRead has been increased.");
 			}
 		}
+
+		public void SendSpam(int spamCount)
+		{
+			IncreaseSpam(spamCount);
+			OnSpamRead();
+		}
 	}
 }

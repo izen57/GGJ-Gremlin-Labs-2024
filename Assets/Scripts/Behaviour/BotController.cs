@@ -1,11 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Assets.Scripts;
+
+using System.Collections;
+
+using UnityEngine;
 
 public class BotController : MonoBehaviour
 {
     public BotSO botSO;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +25,8 @@ public class BotController : MonoBehaviour
         yield return new WaitForSeconds(time);
         while (true)
         {
-            GameController.Instance.IncreaseSpam(botSO.letters);
-            GameController.Instance.OnSpamRead();
-            Debug.Log("Send letter with bot");
+            GameController.Instance.SendSpam(botSO.letters);
+            Debug.Log("The bot has sent a spam.");
             yield return new WaitForSeconds(time);
         }
     }

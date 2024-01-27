@@ -55,8 +55,7 @@ public class ButtonClick : MonoBehaviour
             letter.transform.rotation = transform.rotation;
             letter.SetActive(true);
 
-            GameController.Instance.IncreaseSpam();
-            GameController.Instance.OnSpamRead();
+            GameController.Instance.SendSpam(1);
         }
     }
 
