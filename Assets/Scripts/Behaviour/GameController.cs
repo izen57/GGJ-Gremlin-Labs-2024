@@ -55,13 +55,14 @@ public class GameController
 		Debug.Log("Money has been increased.");
 	}
 
-	public bool OnSpamRead()
+	public bool OnSpamRead(int spamCount)
 	{
-		if (++_internalSpamReadCounter % ReadFrequency == 0) {
+		_internalSpamReadCounter += spamCount;
+		if (_internalSpamReadCounter % ReadFrequency == 0) {
 			IncreaseMoney();
-			SpamRead++;
+			SpamRead += spamCount;
 			Object.FindObjectOfType<SpamReadText>().ChangeText(SpamRead.ToString());
-			Debug.Log("SpamRead has been increased.");
+			Debug.Log($"SpamRead has been increased by {spamCount}.");
 
 			return true;
 		}
@@ -72,6 +73,6 @@ public class GameController
 	public bool SendSpam(int spamCount)
 	{
 		IncreaseSpam(spamCount);
-		return OnSpamRead();
+		return OnSpamRead(spamCount);
 	}
 }
