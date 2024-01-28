@@ -69,11 +69,11 @@ public class GameController
 		Debug.Log($"Money has been decreased by {amount}.");
 	}
 
-	public void DecreaseReadFrequency(int diff)
+	public void IncreaseReadFrequency(int diff)
 	{
 		ReadFrequency += diff;
 		Object.FindObjectOfType<ReadFrequencyText>(true).ChangeText(ReadFrequency.ToString());
-		Debug.Log($"ReadFrequency has been increased by {diff}.");
+		Debug.Log($"ReadFrequency has been changed by {diff}.");
 	}
 
 	private bool OnSpamRead(int spamCount)
