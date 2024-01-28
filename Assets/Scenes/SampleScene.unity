@@ -4302,7 +4302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Decrease the read frequency by 3 | $1
+  m_text: Increase money amount per a single read by 10 | $5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2bdf5bfe789d2e6498847577720a381f, type: 2}
   m_sharedMaterial: {fileID: -5986102690993529457, guid: 2bdf5bfe789d2e6498847577720a381f, type: 2}
