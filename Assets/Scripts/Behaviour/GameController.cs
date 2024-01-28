@@ -69,6 +69,13 @@ public class GameController
 		Debug.Log($"Money has been decreased by {amount}.");
 	}
 
+	public void DecreaseSpamSent(int amount)
+	{
+		SpamSent -= amount;
+		Object.FindObjectOfType<SpamSentText>(true).ChangeText(SpamSent.ToString());
+		Debug.Log($"SpamSent has been decreased by {amount}.");
+	}
+
 	public void IncreaseReadFrequency(int diff)
 	{
 		ReadFrequency += diff;
