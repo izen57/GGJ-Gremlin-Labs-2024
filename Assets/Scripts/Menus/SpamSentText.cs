@@ -1,8 +1,8 @@
-using TMPro;
+﻿using TMPro;
 
 using UnityEngine;
 
-public class SpamSentText : MonoBehaviour
+public class SpamSentText: MonoBehaviour
 {
 	[SerializeField] TextMeshProUGUI m_Object;
 
