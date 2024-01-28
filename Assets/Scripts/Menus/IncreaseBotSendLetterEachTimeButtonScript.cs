@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BotSentFreq: MonoBehaviour
+public class IncreaseBotSendLetterEachTimeButtonScript: MonoBehaviour
 {
 	[SerializeField] Button m_button;
 
@@ -13,9 +13,9 @@ public class BotSentFreq: MonoBehaviour
 
 	private void IncreaseBotFrequency()
 	{
-		if (GameController.Instance.Money >= 20) {
-			FindObjectOfType<BotController>(true).botSO.time += 10;
-			GameController.Instance.DecreaseMoneyDueToBuying(20);
+		if (GameController.Instance.Money >= 30) {
+			FindObjectOfType<BotController>(true).botSO.time += 20;
+			GameController.Instance.DecreaseMoneyDueToBuying(30);
 		}
 	}
 }
