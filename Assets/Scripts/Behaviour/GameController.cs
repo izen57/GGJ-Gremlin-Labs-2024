@@ -6,12 +6,12 @@ public class GameController
 {
 	public int Money { get; private set; }
 	public int SpamSent { get; private set; }
+	public int MoneyPerRead { get; private set; }
 
-	public int SpamRead { get; private set; }
+	//public int SpamRead { get; private set; }
 	private int _internalSpamReadCounter;
 
 	public int ReadFrequency { get; private set; }
-	public int MoneyPerRead { get; private set; }
 
 	private static GameController _instance = null;
 	public static GameController Instance
@@ -27,7 +27,7 @@ public class GameController
 		Debug.Log("The spammer has been initialized.");
 
 		SpamSent = 0;
-		SpamRead = 0;
+		//SpamRead = 0;
 		_internalSpamReadCounter = 0;
 		Money = 0;
 		MoneyPerRead = 2;
@@ -72,7 +72,7 @@ public class GameController
 	public void IncreaseReadFrequency(int diff)
 	{
 		ReadFrequency += diff;
-		Object.FindObjectOfType<ReadFrequencyText>(true).ChangeText(ReadFrequency.ToString());
+		//Object.FindObjectOfType<ReadFrequencyText>(true).ChangeText(ReadFrequency.ToString());
 		Debug.Log($"ReadFrequency has been changed by {diff}.");
 	}
 
@@ -81,9 +81,9 @@ public class GameController
 		_internalSpamReadCounter += spamCount;
 		if (_internalSpamReadCounter % ReadFrequency == 0) {
 			IncreaseMoney();
-			SpamRead += spamCount;
-			Object.FindObjectOfType<SpamReadText>(true).ChangeText(SpamRead.ToString());
-			Debug.Log($"SpamRead has been increased by {spamCount}.");
+			//SpamRead += spamCount;
+			//Object.FindObjectOfType<SpamReadText>(true).ChangeText(SpamRead.ToString());
+			//Debug.Log($"SpamRead has been increased by {spamCount}.");
 
 			return true;
 		}
