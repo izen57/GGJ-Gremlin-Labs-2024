@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87eb0b73750fb9442bfaa9e5c59cbfd2, type: 3}
   m_Name: Update
   m_EditorClassIdentifier: 
-  spam: Hey man, I got good news. TF2 got a major update.
+  mail: Hey man, I got good news. TF2 got a major update.
