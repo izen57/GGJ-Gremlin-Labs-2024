@@ -74,7 +74,6 @@ public class ButtonClick : MonoBehaviour
         yield return new WaitForSeconds(time);
         letter.SetActive(false);
         successAnimation.transform.position = letter.transform.position;
-        successAnimation.transform.rotation = letter.transform.rotation;
         successAnimation.SetActive(true);
         yield return new WaitForSeconds(3);
         successAnimation.SetActive(false);
