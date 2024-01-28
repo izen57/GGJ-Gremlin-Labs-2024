@@ -55,6 +55,13 @@ public class GameController
 		Debug.Log("Money has been increased.");
 	}
 
+	public void IncreaseMoneyPerRead(int amount)
+	{
+		MoneyPerRead += amount;
+		Object.FindObjectOfType<MoneyPerReadText>().ChangeText(MoneyPerRead.ToString());
+		Debug.Log($"MoneyPerRead has been increased by {MoneyPerRead}.");
+	}
+
 	public void DecreaseMoneyDueToBuying(int amount)
 	{
 		Money -= amount;
