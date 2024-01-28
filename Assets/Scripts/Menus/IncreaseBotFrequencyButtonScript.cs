@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IncreaseSpamBotFrequencyButtonScript: MonoBehaviour
+public class IncreaseBotFrequencyButtonScript: MonoBehaviour
 {
 	[SerializeField] Button m_button;
 
