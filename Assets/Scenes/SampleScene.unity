@@ -934,10 +934,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Increase the count of letters the bot sending each time by 20 | $30
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2bdf5bfe789d2e6498847577720a381f, type: 2}
+  m_sharedMaterial: {fileID: -5986102690993529457, guid: 2bdf5bfe789d2e6498847577720a381f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2875,7 +2875,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1724114283}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -3335,8 +3335,9 @@ GameObject:
   - component: {fileID: 2092778144}
   - component: {fileID: 2092778143}
   - component: {fileID: 2092778142}
+  - component: {fileID: 2092778145}
   m_Layer: 5
-  m_Name: IncreaseLe
+  m_Name: IncreaseBotSendLetterEachTimeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3444,6 +3445,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092778140}
   m_CullTransparentMesh: 1
+--- !u!114 &2092778145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092778140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffecda313186fc4ba896787bfd56408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_button: {fileID: 0}
 --- !u!224 &2103645967 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3233483068428007214, guid: 95d5584c6d05d1d4495273449125a7e8, type: 3}
@@ -3595,7 +3609,7 @@ GameObject:
   - component: {fileID: 2145039026}
   - component: {fileID: 2145039025}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Trolling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
