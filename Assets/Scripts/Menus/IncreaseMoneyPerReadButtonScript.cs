@@ -14,7 +14,7 @@ public class IncreaseMoneyPerReadButtonScript: MonoBehaviour
 	private void IncreaseMoneyPerRead()
 	{
 		if (GameController.Instance.Money >= 5) {
-			GameController.Instance.;
+			GameController.Instance.IncreaseMoneyPerRead(10);
 			GameController.Instance.DecreaseMoneyDueToBuying(5);
 		}
 	}
