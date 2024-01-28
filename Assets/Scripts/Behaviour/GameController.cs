@@ -37,42 +37,42 @@ public class GameController
 	public void IncreaseSpam()
 	{
 		SpamSent++;
-		Object.FindObjectOfType<SpamSentText>().ChangeText(SpamSent.ToString());
+		Object.FindObjectOfType<SpamSentText>(true).ChangeText(SpamSent.ToString());
 		Debug.Log("SpamSent has been increased.");
 	}
 
 	private void IncreaseSpam(int spamCount)
 	{
 		SpamSent += spamCount;
-		Object.FindObjectOfType<SpamSentText>().ChangeText(SpamSent.ToString());
+		Object.FindObjectOfType<SpamSentText>(true).ChangeText(SpamSent.ToString());
 		Debug.Log($"SpamSent has been increased by {spamCount}.");
 	}
 
 	public void IncreaseMoney()
 	{
 		Money += MoneyPerRead;
-		Object.FindObjectOfType<MoneyText>().ChangeText(Money.ToString());
+		Object.FindObjectOfType<MoneyText>(true).ChangeText(Money.ToString());
 		Debug.Log("Money has been increased.");
 	}
 
 	public void IncreaseMoneyPerRead(int amount)
 	{
 		MoneyPerRead += amount;
-		Object.FindObjectOfType<MoneyPerReadText>().ChangeText(MoneyPerRead.ToString());
+		Object.FindObjectOfType<MoneyPerReadText>(true).ChangeText(MoneyPerRead.ToString());
 		Debug.Log($"MoneyPerRead has been increased by {MoneyPerRead}.");
 	}
 
 	public void DecreaseMoneyDueToBuying(int amount)
 	{
 		Money -= amount;
-		Object.FindObjectOfType<MoneyText>().ChangeText(Money.ToString());
+		Object.FindObjectOfType<MoneyText>(true).ChangeText(Money.ToString());
 		Debug.Log($"Money has been decreased by {amount}.");
 	}
 
 	public void DecreaseReadFrequency(int diff)
 	{
 		ReadFrequency += diff;
-		Object.FindObjectOfType<ReadFrequencyText>().ChangeText(ReadFrequency.ToString());
+		Object.FindObjectOfType<ReadFrequencyText>(true).ChangeText(ReadFrequency.ToString());
 		Debug.Log($"ReadFrequency has been increased by {diff}.");
 	}
 
@@ -82,7 +82,7 @@ public class GameController
 		if (_internalSpamReadCounter % ReadFrequency == 0) {
 			IncreaseMoney();
 			SpamRead += spamCount;
-			Object.FindObjectOfType<SpamReadText>().ChangeText(SpamRead.ToString());
+			Object.FindObjectOfType<SpamReadText>(true).ChangeText(SpamRead.ToString());
 			Debug.Log($"SpamRead has been increased by {spamCount}.");
 
 			return true;
