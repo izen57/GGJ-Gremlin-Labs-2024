@@ -41,7 +41,7 @@ public class GameController
 		Debug.Log("SpamSent has been increased.");
 	}
 
-	public void IncreaseSpam(int spamCount)
+	private void IncreaseSpam(int spamCount)
 	{
 		SpamSent += spamCount;
 		Object.FindObjectOfType<SpamSentText>().ChangeText(SpamSent.ToString());
@@ -55,14 +55,21 @@ public class GameController
 		Debug.Log("Money has been increased.");
 	}
 
-	public void IncreaseReadFrequency(int diff)
+	public void DecreaseMoneyDueToBuying(int amount)
+	{
+		Money -= amount;
+		Object.FindObjectOfType<MoneyText>().ChangeText(Money.ToString());
+		Debug.Log($"Money has been decreased by {amount}.");
+	}
+
+	public void DecreaseReadFrequency(int diff)
 	{
 		ReadFrequency += diff;
 		Object.FindObjectOfType<ReadFrequencyText>().ChangeText(ReadFrequency.ToString());
 		Debug.Log($"ReadFrequency has been increased by {diff}.");
 	}
 
-	public bool OnSpamRead(int spamCount)
+	private bool OnSpamRead(int spamCount)
 	{
 		_internalSpamReadCounter += spamCount;
 		if (_internalSpamReadCounter % ReadFrequency == 0) {
