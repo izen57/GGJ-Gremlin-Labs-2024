@@ -5,6 +5,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+using UnityEngine.UI;
+
 public class ButtonClick : MonoBehaviour
 {
     [SerializeField]
@@ -15,6 +17,14 @@ public class ButtonClick : MonoBehaviour
     private List<Rigidbody> rbs;
     public GameObject objectToPool;
     public int amountToPool;
+    Sprite pressed;
+    Sprite notPressed;
+
+    void Awake()
+    {
+        pressed = Resources.Load<Sprite>("pressed");
+        notPressed = Resources.Load<Sprite>("not_pressed");
+    }
 
     void Start()
     {
@@ -47,6 +57,7 @@ public class ButtonClick : MonoBehaviour
     private void PressHandler(InputAction.CallbackContext context)
     {
         int letterIndex = GetFreeObjectIndex();
+        StartCoroutine(PlayPressAnimation());
         if (letterIndex > -1)
         {
             GameObject letter = pooledObjects[letterIndex];
@@ -78,6 +89,15 @@ public class ButtonClick : MonoBehaviour
         yield return new WaitForSeconds(3);
         successAnimation.SetActive(false);
     }
+
+    IEnumerator PlayPressAnimation()
+    {
+        gameObject.GetComponent<Image>().sprite = pressed;
+        yield return new WaitForSeconds(1);
+        gameObject.GetComponent<Image>().sprite = notPressed;
+    }
+
+    
 
 public int GetFreeObjectIndex()
     {
