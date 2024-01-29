@@ -47,6 +47,17 @@
                 },
                 {
                     "name": "",
+                    "id": "476714a2-c0fd-4f3a-b1f7-60104c54154e",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f6e69acc-105b-4d32-b833-ab34efd4febc",
                     "path": "<Keyboard>/w",
                     "interactions": "",

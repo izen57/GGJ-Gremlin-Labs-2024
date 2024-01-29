@@ -10,21 +10,21 @@ using UnityEngine.UI;
 public class ButtonClick : MonoBehaviour
 {
     [SerializeField]
-    public InputActionReference buttonPressAction;
+    //public InputActionReference buttonPressAction;
     public GameObject successAnimation;
 
     private List<GameObject> pooledObjects;
     private List<Rigidbody> rbs;
     public GameObject objectToPool;
     public int amountToPool;
-    Sprite pressed;
+    /*Sprite pressed;
     Sprite notPressed;
 
     void Awake()
     {
         pressed = Resources.Load<Sprite>("pressed");
         notPressed = Resources.Load<Sprite>("not_pressed");
-    }
+    }*/
 
     void Start()
     {
@@ -42,7 +42,7 @@ public class ButtonClick : MonoBehaviour
         successAnimation.SetActive(false);
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         buttonPressAction.action.performed += PressHandler;
         buttonPressAction.action.Enable();
@@ -52,12 +52,11 @@ public class ButtonClick : MonoBehaviour
     {
         buttonPressAction.action.performed -= PressHandler;
         buttonPressAction.action.Disable();
-    }
+    }*/
 
-    private void PressHandler(InputAction.CallbackContext context)
+    public void PressHandler()//(InputAction.CallbackContext context)
     {
         int letterIndex = GetFreeObjectIndex();
-        StartCoroutine(PlayPressAnimation());
         if (letterIndex > -1)
         {
             GameObject letter = pooledObjects[letterIndex];
@@ -88,18 +87,9 @@ public class ButtonClick : MonoBehaviour
         successAnimation.SetActive(true);
         yield return new WaitForSeconds(3);
         successAnimation.SetActive(false);
-    }
+    }    
 
-    IEnumerator PlayPressAnimation()
-    {
-        gameObject.GetComponent<Image>().sprite = pressed;
-        yield return new WaitForSeconds(1);
-        gameObject.GetComponent<Image>().sprite = notPressed;
-    }
-
-    
-
-public int GetFreeObjectIndex()
+    public int GetFreeObjectIndex()
     {
         for (int i = 0; i < amountToPool; i++)
         {
@@ -110,6 +100,4 @@ public int GetFreeObjectIndex()
         }
         return -1;
     }
-
-
 }
